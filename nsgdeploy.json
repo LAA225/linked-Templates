@@ -12,7 +12,7 @@
     },
     "functions": [],
     "variables": {
-        "networkSecurityGroupName": "nsg" //follow proper naming convention
+        "networkSecurityGroupName": "nsg-test-eastus-001" 
     },
     "resources": [
         {
