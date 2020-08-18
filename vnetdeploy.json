@@ -13,13 +13,13 @@
     "functions": [],
     "variables": {
         "addressPrefix": "10.0.0.0/16",
-        "subnet1Name": "Sub1",
-        "subnet2Name": "Sub2",
-        "subnet3Name": "Sub3",
+        "subnet1Name": "snet-test-eastus-001",
+        "subnet2Name": "snet-test-eastus-001",
+        "subnet3Name": "snet-test-eastus-001",
         "subnet1Prefix": "10.0.0.0/24",
         "subnet2Prefix": "10.0.1.0/24",
         "subnet3Prefix": "10.0.2.0/24",
-        "virtualNetworkName": "Vnet"
+        "virtualNetworkName": "vnet-test-eastus-001"
     },
     "resources": [
         {
