@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vmName": {
-            "value": "LinuxVM"
+            "value": "vm-test-eastus-001"
         },
         "adminUsername": {
             "value": "laiba"
@@ -24,16 +24,16 @@
             "value": "Standard_B1s"
         },
         "virtualNetworkName": {
-            "value": "Vnet"
+            "value": "vnet-test-eastus-001"
         },
         "subnetName": {
-            "value": "Sub3"
+            "value": "snet-test-eastus-003"
         },
         "networkSecurityGroupName": {
-            "value": "default-NSG"
+            "value": "nsg-test-eastus-001"
         },
         "resourceGroupName": {
-            "value": "arm-vscode" 
+            "value": "rg-test-arm" 
         }
     }
 }
