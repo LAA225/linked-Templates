@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "variables": {},
+    "resources": [
+      {
+        "type": "Microsoft.Resources/deployments",
+        "apiVersion": "2019-10-01",
+        "name": "vnetTemplate",
+        "properties": {
+          "mode": "Incremental",
+          "templateLink": {
+            "uri":"https://sttestlinkedtemplate.file.core.windows.net/linkedtemplates/vnetdeploy.json",
+            "contentVersion":"1.0.0.0"
+          }
+        }
+      },
+      {
+        "type": "Microsoft.Resources/deployments",
+        "apiVersion": "2019-10-01",
+        "name": "nsgTemplate",
+        "properties": {
+          "mode": "Incremental",
+          "templateLink": {
+            "uri":"https://sttestlinkedtemplate.file.core.windows.net/linkedtemplates/nsgdeploy.json",
+            "contentVersion":"1.0.0.0"
+          }
+        }
+      },
+      {
+        "type": "Microsoft.Resources/deployments",
+        "apiVersion": "2019-10-01",
+        "name": "vmTemplate",
+        "properties": {
+          "mode": "Incremental",
+          "templateLink": {
+            "uri":"https://sttestlinkedtemplate.file.core.windows.net/linkedtemplates/vmdeploy.json",
+            "contentVersion":"1.0.0.0"
+          },
+          "parametersLink": {
+              "uri":"https://sttestlinkedtemplate.file.core.windows.net/linkedtemplates/vmdeploy.parameters.json"
+          }
+        }
+      }
+    ],
+    "outputs": {
+    }
+  }

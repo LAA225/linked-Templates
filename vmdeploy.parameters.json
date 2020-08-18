@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "value": "LinuxVM"
+        },
+        "adminUsername": {
+            "value": "laiba"
+        },
+        "authenticationType": {
+            "value": "password"
+        },
+        "adminPasswordOrKey": {
+            "value": "6@dqt+q3*3pqMHh3X6&7d~H7" 
+        },
+        "dnsLabelPrefix": {
+            "value": "simplelinuxvm786" 
+        },
+        "ubuntuOSVersion": {
+            "value": "18.04-LTS"
+        },
+        "VmSize": {
+            "value": "Standard_B1s"
+        },
+        "virtualNetworkName": {
+            "value": "Vnet"
+        },
+        "subnetName": {
+            "value": "Sub3"
+        },
+        "networkSecurityGroupName": {
+            "value": "default-NSG"
+        },
+        "resourceGroupName": {
+            "value": "arm-vscode" 
+        }
+    }
+}
