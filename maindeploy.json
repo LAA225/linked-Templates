@@ -11,7 +11,7 @@
         "properties": {
           "mode": "Incremental",
           "templateLink": {
-            "uri":"https://sttestlinkedtemplate.file.core.windows.net/linkedtemplates/vnetdeploy.json",
+            "uri":"https://raw.githubusercontent.com/LAA225/linked-Templates/master/vnetdeploy.json",
             "contentVersion":"1.0.0.0"
           }
         }
@@ -23,7 +23,7 @@
         "properties": {
           "mode": "Incremental",
           "templateLink": {
-            "uri":"https://sttestlinkedtemplate.file.core.windows.net/linkedtemplates/nsgdeploy.json",
+            "uri":"https://raw.githubusercontent.com/LAA225/linked-Templates/master/nsgdeploy.json",
             "contentVersion":"1.0.0.0"
           }
         }
@@ -35,11 +35,11 @@
         "properties": {
           "mode": "Incremental",
           "templateLink": {
-            "uri":"https://sttestlinkedtemplate.file.core.windows.net/linkedtemplates/vmdeploy.json",
+            "uri":"https://raw.githubusercontent.com/LAA225/linked-Templates/master/vmdeploy.json",
             "contentVersion":"1.0.0.0"
           },
           "parametersLink": {
-              "uri":"https://sttestlinkedtemplate.file.core.windows.net/linkedtemplates/vmdeploy.parameters.json"
+              "uri":"https://raw.githubusercontent.com/LAA225/linked-Templates/master/vmdeploy.parameters.json"
           }
         }
       }
