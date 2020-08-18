@@ -2,12 +2,16 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {},
-    "variables": {},
+    "variables": {
+        "vnetTemplateName": "vnetTemplate",
+        "nsgTemplateName": "nsgTemplate",
+        "vmTemplate": "vmTemplate"
+    },
     "resources": [
       {
         "type": "Microsoft.Resources/deployments",
         "apiVersion": "2019-10-01",
-        "name": "vnetTemplate",
+        "name": "[variables('vnetTemplateName')]",
         "properties": {
           "mode": "Incremental",
           "templateLink": {
@@ -19,7 +23,10 @@
       {
         "type": "Microsoft.Resources/deployments",
         "apiVersion": "2019-10-01",
-        "name": "nsgTemplate",
+        "name": "[variables('nsgTemplateName')]",
+        "dependsOn": [
+            "[resourceId('Microsoft.Resources/deployments',variables('vnetTemplateName'))]"
+        ],
         "properties": {
           "mode": "Incremental",
           "templateLink": {
@@ -31,7 +38,11 @@
       {
         "type": "Microsoft.Resources/deployments",
         "apiVersion": "2019-10-01",
-        "name": "vmTemplate",
+        "name": "[variables('vmTemplate')]",
+        "dependsOn": [
+            "[resourceId('Microsoft.Resources/deployments',variables('vnetTemplateName'))]",
+            "[resourceId('Microsoft.Resources/deployments',variables('nsgTemplateName'))]"
+        ],
         "properties": {
           "mode": "Incremental",
           "templateLink": {
