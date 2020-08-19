@@ -6,7 +6,7 @@
             "value": "vm-test-eastus-001"
         },
         "adminUsername": {
-            "value": "laiba"
+            "value": "user"
         },
         "authenticationType": {
             "value": "password"
